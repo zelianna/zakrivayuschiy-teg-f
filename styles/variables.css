@@ -1,1 +1,30 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font-family: 'Inter-Variable', sans-serif;
+  --accent-font-family: 'PressStart2P-Regular';
+  --font-weight-card: 400;
+  --font-weight-title: 700;
+  --background-color: #FFFFFF; /*Основная тема-светлая  */
+  --accent-color: #000000;
+ /* --background-image: repeating-linear-gradient(to right, rgba(211, 211, 211, 1), rgba(211, 211, 211, 1) 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
+  repeating-linear-gradient(to top, rgba(211, 211, 211, 1), rgba(211, 211, 211, 1) 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
+  linear-gradient(to bottom, rgba(231, 231, 231, 1) 0.01%, rgba(26, 26, 26, 1));*/
+  --background-image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, #d3d3d300 2px, #d3d3d300 4px),
+                      repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, #d3d3d300 2px, #d3d3d300 4px),
+                      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  
+  /*--width: clamp(375px, 70%, 700px);*/
+
+
+}
+
+
+
+/* Стили при ширине окна просмотра <= 375px */
+/*@media (width <= 375px){
+    .header {
+      min-height: 1024px;
+      padding: 20px;
+      margin-block-end: 60px;
+    }
+}  */
