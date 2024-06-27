@@ -35,9 +35,10 @@
   font-family: var(--accent-font-family);
   flex-direction: column;
   background-color: #FFFFFF;
-  margin: 100px auto 0px auto;
+  margin: 100px auto 102px auto;
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-block-end: 25px;
+  outline: 2px solid var(--accent-color);
 }
 
 .logo-group {
@@ -78,8 +79,100 @@
   text-transform: uppercase;
 }
 
+.theme-menu__button:disabled::before {
+  content: '▶';
+  
+}
+
 .main {
   display: grid;
   justify-content: center;
   align-items: center;
+  margin: 0px auto 0px auto;
+
+}
+
+.article-list {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  outline: 2px solid var(--accent-color);
+  background-color: #FFFFFF;
+  margin: 0px auto 42px auto;
+  display: grid;
+  font-size: 18px;
+}
+
+.card-title {
+  padding: 6px 10px 6px 10px;
+  line-height: 21.78px;
+  font-family: var(--main-font-family);
+  font-variation-settings: 'wght' var(--font-weight-title);
+  font-size: 18px;
+}
+
+.card-img {
+  width: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
+  height: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
+  justify-self: center;
+}
+
+.card-text {
+  margin: 27px 27px 27px 27px;
+  line-height: 21px;
+}
+
+.card-text-student {
+  margin: 0px 25px 25px 25px;
+  line-height: 21px;
+}
+
+
+.button-like {
+  width: 169px;
+  height: 38px;
+  border-style: none;
+  /*outline: 2px solid #000000;*/
+  background-color: transparent;
+  margin: 0px 27px 27px auto;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2px 2px 2px 0px;
+}
+
+.border {
+  outline: 2px solid #000000;
+}
+
+.footer {
+  display: grid;
+  margin: 0px auto 0px auto;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-card);
+  line-height: 12.6px;
+}
+
+.button-save {
+  justify-self: center;
+  border-style: none;
+  outline: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+  margin: 50px auto 100px auto;
+  width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  height: clamp(5.25rem, 5.8882rem + -2.723vw, 3.4375rem);
+}
+
+.button__text {
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-card);
+  line-height: 12.6px;
+  padding-top: auto;
+  padding-bottom: auto;
+  padding: 11px 35px 11px 35px;
+
+  /*outline: 2px solid #000000;*/
 }
