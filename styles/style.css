@@ -70,8 +70,7 @@
 .theme-menu__list {
   display: grid;
   gap: 11px;
-  margin-left: 20px;
-  /*margin-right: clamp(8.3125rem, 4.7033rem + 15.3991vw, 18.5625rem);*/
+  
 }
 
 .theme-menu__button {
@@ -80,15 +79,75 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  transition: opacity 0.3s ease;
+  position: relative;
+  overflow: hidden; 
+  padding-left: 20px;
+}
+
+.theme-menu__button:hover, .theme-menu__button:focus {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:focus::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled::before {
   content: '▶';
-  left: 297px;
+  /*left: 297px;*/
+  width: 14px;
+  height: 14px;
+  font-family: var(--accent-font-family);
+  font-weight: var(--font-weight-card);
+  opacity: 0.6;
+  animation: moveArrow 0.5s ease-in-out infinite alternate;
+  position: absolute;
+  left: 0px; /* Начальное положение */
+  
+
   /*position: absolute;
   top: 328px;
   left: 297px;*/
 }
+
+/* Определяем keyframes для анимации */
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+
 
 .main {
   display: grid;
