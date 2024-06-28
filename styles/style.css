@@ -160,7 +160,7 @@
 
 
 .card-text {
-  margin: 27px 27px 27px 27px;
+  margin: 25px 27px 25px 27px;
   line-height: 21px;
 }
 
@@ -169,18 +169,31 @@
   line-height: 21px;
 }
 
+.card__buttons {
+  /*width: 175px;*/
+  width: 169px;
+  height: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-self: end;
+  margin-bottom: 25px;
+  margin-right: 33px;
+}
+
 
 .card__icon-button {
-  /*width: 169px;*/
-  width: 175px;
-  height: 38px;
   border-style: none;
   background-color: transparent;
-  margin: 0px 25px 25px auto;
+  /*margin: 0px 25px 25px auto;*/
   display: flex;
   justify-content: flex-start;
   padding: 2px 2px 2px 0px;
-  gap: 6px;
+}
+
+.card__like-button {
+
+  border-style: none;
+  background-color: transparent;
 }
 
 .border {
