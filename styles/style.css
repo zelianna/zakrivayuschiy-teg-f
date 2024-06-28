@@ -34,11 +34,12 @@
   align-items: center;
   font-family: var(--accent-font-family);
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
   margin: 100px auto 102px auto;
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-block-end: 25px;
   outline: 2px solid var(--accent-color);
+  position: relative;
 }
 
 .logo-group {
@@ -69,6 +70,8 @@
 .theme-menu__list {
   display: grid;
   gap: 11px;
+  margin-left: 20px;
+  /*margin-right: clamp(8.3125rem, 4.7033rem + 15.3991vw, 18.5625rem);*/
 }
 
 .theme-menu__button {
@@ -81,7 +84,10 @@
 
 .theme-menu__button:disabled::before {
   content: '▶';
-  
+  left: 297px;
+  /*position: absolute;
+  top: 328px;
+  left: 297px;*/
 }
 
 .main {
@@ -99,10 +105,11 @@
 
 .card {
   outline: 2px solid var(--accent-color);
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
   margin: 0px auto 42px auto;
   display: grid;
   font-size: 18px;
+  position: relative;
 }
 
 .card-title {
@@ -119,6 +126,39 @@
   justify-self: center;
 }
 
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: var(--font-weight-card);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+
+
+}
+
+@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) {
+  .image-label {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+  }
+}
+
+/*В случае отсутствия поддержки используем text-shadow как фоллбэк.*/
+.label {
+  text-shadow: 1px 1px 0 var(--label-stroke-color), -1px -1px 0 var(--label-stroke-color),
+               1px -1px 0 var(--label-stroke-color), -1px 1px 0 var(--label-stroke-color);
+}
+
+
 .card-text {
   margin: 27px 27px 27px 27px;
   line-height: 21px;
@@ -130,16 +170,17 @@
 }
 
 
-.button-like {
-  width: 169px;
+.card__icon-button {
+  /*width: 169px;*/
+  width: 175px;
   height: 38px;
   border-style: none;
-  /*outline: 2px solid #000000;*/
   background-color: transparent;
-  margin: 0px 27px 27px auto;
+  margin: 0px 25px 25px auto;
   display: flex;
   justify-content: flex-start;
   padding: 2px 2px 2px 0px;
+  gap: 6px;
 }
 
 .border {
@@ -170,8 +211,6 @@
   font-size: 14px;
   font-weight: var(--font-weight-card);
   line-height: 12.6px;
-  padding-top: auto;
-  padding-bottom: auto;
   padding: 11px 35px 11px 35px;
 
   /*outline: 2px solid #000000;*/
