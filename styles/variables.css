@@ -24,11 +24,17 @@
 
   --width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --label-stroke-color: #FFFFFF; 
+  --button-text-color: #FFFFFF;
+  --button-color: #FFFFFF;
 }
 
 /* Стили при ширине окна просмотра <= 375px */
 @media (width <= 375px) {
   .content-section {
     width: 100%; /* Растягиваем на всю ширину */
+  }
+
+  .button-save {
+    height: 84px;
   }
 }

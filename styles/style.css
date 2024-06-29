@@ -100,17 +100,21 @@
   left: 0;
   width: 100%;
   height: 2px;
-  color: black;
+  background-color: currentColor;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: bottom left;
   transition: transform 0.3s ease;
 }
 
-.theme-menu__button:focus::after {
+.theme-menu__button:hover::after {
   transform: scaleX(1);
 }
 
 .theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:focus::after {
   transform: scaleX(1);
 }
 
@@ -236,28 +240,28 @@
   flex-direction: row;
   justify-self: end;
   margin-bottom: 25px;
-  margin-right: 33px;
+  margin-right: 27px;
 }
 
 
 .card__icon-button {
   border-style: none;
   background-color: transparent;
-  /*margin: 0px 25px 25px auto;*/
   display: flex;
   justify-content: flex-start;
   padding: 2px 2px 2px 0px;
 }
 
 .card__like-button {
-
   border-style: none;
   background-color: transparent;
+  outline: 2px solid #000000;
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+
 }
 
-.border {
-  outline: 2px solid #000000;
-}
 
 .footer {
   display: grid;
@@ -275,7 +279,14 @@
   background-color: var(--background-color);
   margin: 50px auto 100px auto;
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  height: clamp(5.25rem, 5.8882rem + -2.723vw, 3.4375rem);
+  height: 55px;  
+  display: flex;
+  gap: 3.5px;
+  padding: 15px 19px;
+  position: relative;
+  overflow: hidden;
+
+  
 }
 
 .button__text {
@@ -284,6 +295,48 @@
   font-weight: var(--font-weight-card);
   line-height: 12.6px;
   padding: 11px 35px 11px 35px;
+  color: var(--button-color);
+  /*color: white; */
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  transition: color 0.5s ease-in-out;
 
-  /*outline: 2px solid #000000;*/
+}
+
+.button-save .button__text {
+  padding: 2px;
+  margin-top: 4.5px;
+}
+
+.card__like-button:focus,
+.button-save:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button:hover,
+.button-save:hover {
+  cursor: pointer;
+}
+
+.card__like-button::before,
+.button-save::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  /*background-color: white; */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__like-button:hover::before,
+.button-save:hover::before {
+  transform: scaleX(1);
 }

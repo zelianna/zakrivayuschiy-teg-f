@@ -26,6 +26,8 @@
     ),
     linear-gradient(to bottom, #007f0c 0.01%, #004306);
     --label-stroke-color: #000000;
+    --button-text-color: #000000;
+    --button-color: #00cc14;
 }
 
 :root.theme-light {
@@ -49,6 +51,8 @@
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
     --label-stroke-color: #FFFFFF;
+    --button-text-color: #FFFFFF;
+    --button-color: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,5 +79,7 @@
       ),
       linear-gradient(to bottom, #007f0c 0.01%, #004306);
       --label-stroke-color: #000000;
+      --button-text-color: #000000;
+      --button-color: #00cc14;
   }
 }
