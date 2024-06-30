@@ -26,6 +26,8 @@
   --label-stroke-color: #FFFFFF; 
   --button-text-color: #FFFFFF;
   --button-color: #FFFFFF;
+  --contour-color: #000000;
+  --fill-color: red;
 }
 
 /* Стили при ширине окна просмотра <= 375px */

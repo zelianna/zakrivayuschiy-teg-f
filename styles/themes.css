@@ -28,6 +28,7 @@
     --label-stroke-color: #000000;
     --button-text-color: #000000;
     --button-color: #00cc14;
+    --contour-color: #00cc14;
 }
 
 :root.theme-light {
@@ -53,6 +54,7 @@
     --label-stroke-color: #FFFFFF;
     --button-text-color: #FFFFFF;
     --button-color: #FFFFFF;
+    --contour-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,5 +83,6 @@
       --label-stroke-color: #000000;
       --button-text-color: #000000;
       --button-color: #00cc14;
+      --contour-color: #00cc14;
   }
 }

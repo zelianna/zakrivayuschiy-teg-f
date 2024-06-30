@@ -241,6 +241,7 @@
   justify-self: end;
   margin-bottom: 25px;
   margin-right: 27px;
+  gap: 10px;
 }
 
 
@@ -249,13 +250,21 @@
   background-color: transparent;
   display: flex;
   justify-content: flex-start;
-  padding: 2px 2px 2px 0px;
+  border: 2px solid transparent;
+  padding: 0; 
+  background: none;
+  cursor: pointer;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease; 
 }
 
 .card__like-button {
   border-style: none;
   background-color: transparent;
-  outline: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color);
   padding: 0px;
   position: relative;
   overflow: hidden;
@@ -275,7 +284,7 @@
 .button-save {
   justify-self: center;
   border-style: none;
-  outline: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color);
   background-color: var(--background-color);
   margin: 50px auto 100px auto;
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
@@ -375,4 +384,72 @@
 .button-save:hover::before {
   transform: scaleX(1);
 }
+
+/*Фокус на кнопке с сердцем*/
+.card__icon-button:focus {
+  outline: none; 
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
+
+.sparks {
+  opacity: 0;
+}
+/*
+.like-icon {
+  fill: none;
+}*/
+
+.like-icon .core {
+  transition: fill 0.3s linear;
+}
+
+.like-icon .main-body {
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contour-color); /* Заполнение сердцевины акцентным цветом */
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--contour-color); /* Заполнение основного тела акцентным цветом */
+}
+
+.card__icon-button .core {
+  fill: none; /* Начальный цвет сердцевины */
+}
+
+.card__icon-button .main-body {
+  fill: none; /* Начальный цвет основного тела */
+}
+
+.card__icon-button:hover .core {
+  transition-delay: 0s;
+}
+
+.card__icon-button:hover .main-body {
+  transition-delay: 0.05s;
+}
+
+/* Состояние, когда курсор уходит с иконки */
+.card__icon-button:not(:hover) .core {
+  fill: none;
+  transition-delay: 0.03s;
+}
+
+.card__icon-button:not(:hover) .main-body {
+  fill: none;
+  transition-delay: 0s;
+}
+
+.card__icon-button:active .core,
+.card__icon-button:active .main-body {
+  fill: red; /* Заполнение красным цветом */
+  transition-delay: 0s, 0.05s;
+}
+
+
 
