@@ -23,9 +23,9 @@
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 
   --width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  --label-stroke-color: #FFFFFF; 
-  --button-text-color: #FFFFFF;
-  --button-color: #FFFFFF;
+  --label-stroke-color: #ffffff;
+  --button-text-color: #ffffff;
+  --button-color: #ffffff;
   --contour-color: #000000;
   --fill-color: red;
 }
