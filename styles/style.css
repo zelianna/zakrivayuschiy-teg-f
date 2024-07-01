@@ -181,23 +181,23 @@
 
 .contrast {
   filter: contrast(80%);
-} 
+}
 
 .blur {
   filter: blur(0.1rem);
-} 
+}
 
 .opacity {
   filter: opacity(0.9);
-} 
+}
 
 .grayscale {
   filter: grayscale(0.8);
-} 
+}
 
 .saturate {
   filter: saturate(50%);
-} 
+}
 
 .effects {
   filter: sepia(1) contrast(1) brightness(80%);
@@ -207,7 +207,6 @@
   position: relative;
   display: inline-block;
   margin: auto;
-
 }
 
 .image-label {
@@ -281,21 +280,11 @@
   overflow: hidden;
   width: 130px;
   height: 38px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
-/*
-.footer {
-  display: grid;
-  margin: 0px auto 0px auto;
-  font-family: var(--accent-font-family);
-  font-size: 14px;
-  font-weight: var(--font-weight-card);
-  line-height: 12.6px;
-}*/
 
 .button-save {
   justify-self: center;
@@ -485,7 +474,7 @@
 .dialog-id {
   position: fixed;
   inset: 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   background: none;
   border: none;
 }
@@ -499,7 +488,7 @@
 .modal-content {
   width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   height: 191px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -521,7 +510,6 @@
 }
 
 .button-close {
-  color: black;
   border: 1px solid black;
   cursor: pointer;
   font-family: var(--accent-font-family);
