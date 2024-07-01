@@ -175,9 +175,39 @@
   justify-self: center;
 }
 
+.bright {
+  filter: brightness(200%);
+}
+
+.contrast {
+  filter: contrast(80%);
+} 
+
+.blur {
+  filter: blur(0.1rem);
+} 
+
+.opacity {
+  filter: opacity(0.9);
+} 
+
+.grayscale {
+  filter: grayscale(0.8);
+} 
+
+.saturate {
+  filter: saturate(50%);
+} 
+
+.effects {
+  filter: sepia(1) contrast(1) brightness(80%);
+}
+
 .image-wrapper {
   position: relative;
   display: inline-block;
+  margin: auto;
+
 }
 
 .image-label {
@@ -272,7 +302,7 @@
   border-style: none;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
-  margin: 50px auto 100px auto;
+  margin: 8px auto 103px auto;
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   height: 55px;
   display: flex;
@@ -297,14 +327,14 @@
 
 .floppy {
   color: var(--button-color);
-  /*mix-blend-mode: difference;*/
   position: relative;
   z-index: 1;
   transition: color 0.5s ease-in-out;
+  stroke: var(--accent-color);
 }
 
 .button-save:hover .floppy {
-  color: white;
+  stroke: var(--button-text-color);
 }
 
 .button-save .button__text {
@@ -456,17 +486,21 @@
   position: fixed;
   inset: 0;
   background-color: #FFFFFF;
+  background: none;
+  border: none;
 }
 
-dialog::backdrop {
+.dialog-id::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
+  /*width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  height: 191px;*/
 }
 
 .modal-content {
   width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   height: 191px;
   background-color: #FFFFFF;
-  border: none;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -475,20 +509,29 @@ dialog::backdrop {
   font-size: 14px;
   line-height: 14px;
   font-weight: var(--font-weight-card);
-
+  padding: 30px;
 }
 
 .modal-message {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 293px;
+  height: 63px;
 }
 
 .button-close {
-  padding: 10px 20px;
   color: black;
   border: 1px solid black;
   cursor: pointer;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-card);
+  line-height: 12.6px;
+  color: var(--button-color);
+  width: 293px;
+  height: 38px;
+  background-color: white;
 }
 
 .modal-message-text {
