@@ -355,10 +355,6 @@
 .sparks {
   opacity: 0;
 }
-/*
-.like-icon {
-  fill: none;
-}*/
 
 .like-icon .core {
   transition: fill 0.3s linear;
