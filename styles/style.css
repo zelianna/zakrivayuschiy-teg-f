@@ -293,7 +293,7 @@
   background-color: var(--background-color);
   margin: 8px auto 103px auto;
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  height: 55px;
+  height: var(--height-button-save);
   display: flex;
   gap: 3.5px;
   position: relative;
@@ -443,6 +443,7 @@
 .like-icon.is-liked .heart {
   animation: scale-heart 0.3s ease-in-out;
   animation-delay: 0.1s;
+  transform-origin: center;
 }
 
 @keyframes scale-heart {
@@ -481,8 +482,6 @@
 
 .dialog-id::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
-  /*width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  height: 191px;*/
 }
 
 .modal-content {
@@ -504,7 +503,6 @@
 .modal-message {
   display: flex;
   align-items: center;
-  gap: 10px;
   width: 293px;
   height: 63px;
 }
@@ -524,4 +522,14 @@
 
 .modal-message-text {
   color: black;
+  text-transform: uppercase;
+}
+
+.floppy-dialog {
+  top: 25px;
+  left: 20px;
+}
+
+.ok-dialog {
+  margin-top: 20px;
 }

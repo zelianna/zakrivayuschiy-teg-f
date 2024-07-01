@@ -28,6 +28,7 @@
   --button-color: #ffffff;
   --contour-color: #000000;
   --fill-color: red;
+  --height-button-save: 55px;
 }
 
 /* Стили при ширине окна просмотра <= 375px */
@@ -37,6 +38,7 @@
   }
 
   .button-save {
-    height: 84px;
+    --height-button-save: 84px;
+    flex-direction: column;
   }
 }
