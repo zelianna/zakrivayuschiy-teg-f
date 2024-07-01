@@ -197,9 +197,10 @@
           </article>
         </li>-->
       </ul>
-    </main>
-    <footer class="footer">
-      <button class="button-save">
+      <button class="button-save"
+              type="button"
+              onclick="window['dialog-id'].showModal();"
+              aria-controls="dialog-id">
         <svg
           class="floppy"
           xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +213,29 @@
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-    </footer>
+    </main>
+    <dialog id="dialog-id">
+      <div class="modal-content">
+        <div class="modal-message">
+          <svg
+            class="floppy"
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            fill="currentColor"
+          >
+            <use href="./svg/floppy.svg#floppy-icon"></use>
+          </svg>
+          <span class="modal-message-text">Вставьте дискету, чтобы продолжить</span>
+        </div>
+        <form method="dialog">
+          <button class="button-close">
+            <span class="button__text">ОК</span>
+          </button>  
+        </form>
+      </div> 
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

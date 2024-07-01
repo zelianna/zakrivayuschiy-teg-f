@@ -217,7 +217,7 @@
 }
 
 .card__buttons {
-  width: 169px;
+  width: 185px;
   height: 38px;
   display: flex;
   flex-direction: row;
@@ -236,8 +236,9 @@
   background: none;
   cursor: pointer;
   height: 38px;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  top: 1px;
+  left: 8px;
   transition: border-color 0.3s ease;
 }
 
@@ -250,8 +251,13 @@
   overflow: hidden;
   width: 130px;
   height: 38px;
-}
+  box-sizing: border-box; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+/*
 .footer {
   display: grid;
   margin: 0px auto 0px auto;
@@ -259,7 +265,7 @@
   font-size: 14px;
   font-weight: var(--font-weight-card);
   line-height: 12.6px;
-}
+}*/
 
 .button-save {
   justify-self: center;
@@ -448,4 +454,47 @@
   50% {
     opacity: 1;
   }
+}
+
+.dialog-id {
+  position: fixed;
+  inset: 0;
+  background-color: #FFFFFF;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+  width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  height: 191px;
+  background-color: #FFFFFF;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: var(--font-weight-card);
+
+}
+
+.modal-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-close {
+  padding: 10px 20px;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.modal-message-text {
+  color: black;
 }
