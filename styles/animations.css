@@ -13,25 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-.card__like-button::before,
-.button-save::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transform-origin: bottom left;
-  transition: transform 0.5s ease-in-out;
-}
-
-.card__like-button:hover::before,
-.button-save:hover::before {
-  transform: scaleX(1);
-}
-
 /*Фокус на кнопке с сердцем*/
 .card__icon-button:focus {
   outline: none;
