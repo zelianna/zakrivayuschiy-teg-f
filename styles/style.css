@@ -291,6 +291,16 @@
   color: var(--button-color);
 }
 
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
 .card__like-button {
   width: 130px;
   height: 38px;
@@ -371,6 +381,10 @@
 .button-close {
   width: 293px;
   height: 38px;
+}
+
+.button-close:default {
+  box-shadow: none;
 }
 
 .modal-message-text {
